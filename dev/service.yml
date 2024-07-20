@@ -1,0 +1,15 @@
+# react-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: carvilla-service
+spec:
+  selector:
+    app: app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30001
+  type: NodePort
+    
